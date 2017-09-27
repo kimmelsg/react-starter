@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Index from '../views/index';
+import Index from '../views/index/index';
 import About from '../views/about';
 
 export default () => (
