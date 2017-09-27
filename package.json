@@ -1,0 +1,69 @@
+{
+  "name": "cloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "precommit": "lint-staged",
+    "build": "webpack -p --config webpack/prod.config.js",
+    "start": "webpack-dev-server --hot --inline --config webpack/dev.config.js"
+  },
+  "jest": {
+    "roots": ["src"],
+    "testMatch": ["<rootDir>/src/**/*.test.tsx"],
+    "moduleFileExtensions": ["js", "ts", "tsx"],
+    "collectCoverageFrom": ["src/views/**"],
+    "setupFiles": ["<rootDir>/src/base/tests/setup.js"],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/src/base/tests/preprocess.js",
+      ".js": "<rootDir>/node_modules/babel-jest"
+    },
+    "collectCoverage": false
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "lint-staged": {
+    "*.test.tsx": ["jest"],
+    "*.ts": ["tsc --noEmit --skipLibCheck"],
+    "*.tsx": ["tsc --jsx react --noEmit --skipLibCheck"],
+    "*.{js,tsx,ts}": [
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/enzyme": "^2.8.8",
+    "@types/jest": "^21.1.0",
+    "@types/react": "^16.0.6",
+    "@types/react-dom": "^15.5.4",
+    "@types/react-router": "^4.0.15",
+    "@types/react-router-dom": "^4.0.7",
+    "awesome-typescript-loader": "^3.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.0.0-beta.7",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.14.3",
+    "jest": "^21.1.0",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.7.0",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "react-test-renderer": "^16.0.0",
+    "source-map-loader": "^0.2.1",
+    "typescript": "^2.5.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}

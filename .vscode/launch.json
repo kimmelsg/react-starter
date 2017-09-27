@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Server",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/.bin/webpack-dev-server",
+      "args": ["--hot", "--inline", "--config", "webpack/dev.config.js"],
+      "outFiles": ["${workspaceRoot}/build/*"],
+      "stopOnEntry": false,
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": null,
+      "runtimeArgs": [],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "internalConsole",
+      "sourceMaps": true
+    },
+    {
+      "name": "Browser",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8080/",
+      "webRoot": "${workspaceRoot}/"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Server/Browser",
+      "configurations": ["Server", "Browser"]
+    }
+  ]
+}
