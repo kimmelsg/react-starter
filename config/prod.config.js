@@ -1,9 +1,10 @@
+const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: ['react-hot-loader/patch', './src/production.js'],
+    main: ['react-hot-loader/patch', './src/base/setup/production.js'],
   },
   output: {
     filename: 'bundle.js',

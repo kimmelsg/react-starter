@@ -7,7 +7,7 @@
     "test": "jest",
     "precommit": "lint-staged",
     "get-types":
-      "apollo-codegen introspect-schema http://10.4.1.42:3000/graphql --output schema.json && apollo-codegen generate **/*.ts --schema schema.json --target typescript --output src/schema.ts",
+      "apollo-codegen introspect-schema http://10.4.1.42:3000/graphql --output schema.json && apollo-codegen generate **/*.ts --schema schema.json --target typescript --output src/base/schema.ts",
     "build": "webpack -p --config config/prod.config.js",
     "start": "webpack-dev-server --hot --inline --config config/dev.config.js"
   },

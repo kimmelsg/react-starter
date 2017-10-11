@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: ['react-hot-loader/patch', './src/development.js'],
+    main: ['react-hot-loader/patch', './src/base/setup/development.js'],
   },
   output: {
     filename: 'bundle.js',

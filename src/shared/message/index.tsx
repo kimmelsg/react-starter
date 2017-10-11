@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 interface MessageProps {
   name: string;
-  children: JSX.Element;
+  children?: JSX.Element;
 }
 
 export default ({ name, children }: MessageProps) => (
