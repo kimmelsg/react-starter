@@ -3,14 +3,20 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "es2015",
+    "moduleResolution": "node",
     "target": "es5",
     "jsx": "react",
-    "lib": ["es5", "es6", "dom"],
+    "allowJs": true,
+    "lib": ["es5", "es6", "dom", "es7", "esnext"],
     "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "shared/*": ["src/shared/*"]
+    }
   },
-  "include": ["./src/**/*"]
+  "include": ["./src"]
 }

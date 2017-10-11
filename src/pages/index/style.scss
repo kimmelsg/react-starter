@@ -1,0 +1,9 @@
+.div {
+  background-color: blue;
+  padding: 30px;
+
+  & p {
+    background-color: yellow;
+    color: red;
+  }
+}

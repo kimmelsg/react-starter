@@ -14,11 +14,38 @@ module.exports = {
 
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.json', '.gql'],
+    alias: {
+      shared: path.resolve(__dirname, '../src/shared/'),
+    },
   },
 
   module: {
     rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              camelCase: true,
+              localIdentName: '[path][name]__[local]',
+            },
+          },
+          {
+            loader: 'sass-loader', // compiles Sass to CSS
+          },
+        ],
+      },
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader',
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -64,7 +91,7 @@ module.exports = {
         minifyCSS: true,
         minifyURLs: true,
       },
-      template: 'webpack/base.ejs',
+      template: 'config/base.ejs',
     }),
   ],
 };

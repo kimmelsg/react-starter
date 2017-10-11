@@ -6,7 +6,7 @@
       "type": "node",
       "request": "launch",
       "program": "${workspaceRoot}/node_modules/.bin/webpack-dev-server",
-      "args": ["--hot", "--inline", "--config", "webpack/dev.config.js"],
+      "args": ["--hot", "--inline", "--config", "config/dev.config.js"],
       "outFiles": ["${workspaceRoot}/build/*"],
       "stopOnEntry": false,
       "cwd": "${workspaceRoot}",

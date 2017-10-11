@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Index from '../views/index/index';
-import About from '../views/about';
+import About from '../pages/about';
+import Index from '../pages/index/index';
 
 export default () => (
   <BrowserRouter>

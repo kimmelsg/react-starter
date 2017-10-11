@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { RouteComponentProps, match } from 'react-router-dom';
 
 interface AboutParams {
