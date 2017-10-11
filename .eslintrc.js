@@ -1,6 +1,13 @@
 // In a file called .eslintrc.js
 module.exports = {
-  parser: 'babel-eslint',
+  parser: 'typescript-eslint-parser',
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   rules: {
     'graphql/template-strings': [
       'error',
@@ -10,5 +17,6 @@ module.exports = {
       },
     ],
   },
-  plugins: ['graphql'],
+
+  plugins: ['graphql', 'react'],
 };

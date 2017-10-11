@@ -21,6 +21,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json', '.gql'],
     alias: {
       shared: path.resolve(__dirname, '../src/shared/'),
+      schema: path.resolve(__dirname, '../src/base/schema'),
     },
   },
 

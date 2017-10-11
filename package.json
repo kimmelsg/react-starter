@@ -6,18 +6,29 @@
   "scripts": {
     "test": "jest",
     "precommit": "lint-staged",
-    "get-types":
-      "apollo-codegen introspect-schema http://10.4.1.42:3000/graphql --output schema.json && apollo-codegen generate **/*.ts --schema schema.json --target typescript --output src/base/schema.ts",
+    "get-types": "apollo-codegen introspect-schema http://10.4.1.42:3000/graphql --output schema.json && apollo-codegen generate **/*.ts --schema schema.json --target typescript --output src/base/schema.ts",
     "build": "webpack -p --config config/prod.config.js",
     "start": "webpack-dev-server --hot --inline --config config/dev.config.js"
   },
   "jest": {
-    "roots": ["src"],
+    "roots": [
+      "src"
+    ],
     "mapCoverage": true,
-    "testMatch": ["<rootDir>/src/**/*.test.tsx"],
-    "moduleFileExtensions": ["js", "ts", "tsx"],
-    "collectCoverageFrom": ["src/views/**"],
-    "setupFiles": ["<rootDir>/src/base/test-setup.js"],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.tsx"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx"
+    ],
+    "collectCoverageFrom": [
+      "src/views/**"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/base/test-setup.js"
+    ],
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "identity-obj-proxy"
     },
@@ -30,13 +41,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-client-preset": "0.1.0-1",
     "react": "^16.0.0",
     "react-apollo": "^1.4.16",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2"
   },
   "lint-staged": {
-    "*.test.tsx": ["jest"],
+    "*.test.tsx": [
+      "jest"
+    ],
     "*.{js,tsx,ts}": [
       "prettier --single-quote --trailing-comma es5 --write",
       "eslint",
@@ -61,6 +75,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-typescript": "^7.0.0-alpha.19",
     "css-loader": "^0.28.7",
     "enzyme": "^3.0.0-beta.7",
     "enzyme-adapter-react-16": "^1.0.0",
@@ -83,6 +98,7 @@
     "style-loader": "^0.18.2",
     "ts-jest": "^21.0.1",
     "typescript": "^2.5.2",
+    "typescript-eslint-parser": "^8.0.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
