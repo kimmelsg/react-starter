@@ -1,6 +1,10 @@
 query announcements {
   announcements {
-    title
-    namef
+    edges {
+      node {
+        title
+        description
+      }
+    }
   }
 }

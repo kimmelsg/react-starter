@@ -6,29 +6,18 @@
   "scripts": {
     "test": "jest",
     "precommit": "lint-staged",
-    "get-types": "apollo-codegen introspect-schema http://10.4.1.42:3000/graphql --output schema.json && apollo-codegen generate **/*.ts --schema schema.json --target typescript --output src/base/schema.ts",
+    "get-types":
+      "apollo-codegen introspect-schema http://10.4.1.42:3000/graphql --output schema.json && apollo-codegen generate src/**/*.gql --schema schema.json --target typescript --output src/base/schema.ts",
     "build": "webpack -p --config config/prod.config.js",
     "start": "webpack-dev-server --hot --inline --config config/dev.config.js"
   },
   "jest": {
-    "roots": [
-      "src"
-    ],
+    "roots": ["src"],
     "mapCoverage": true,
-    "testMatch": [
-      "<rootDir>/src/**/*.test.tsx"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "ts",
-      "tsx"
-    ],
-    "collectCoverageFrom": [
-      "src/views/**"
-    ],
-    "setupFiles": [
-      "<rootDir>/src/base/test-setup.js"
-    ],
+    "testMatch": ["<rootDir>/src/**/*.test.tsx"],
+    "moduleFileExtensions": ["js", "ts", "tsx"],
+    "collectCoverageFrom": ["src/views/**"],
+    "setupFiles": ["<rootDir>/src/base/test-setup.js"],
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "identity-obj-proxy"
     },
@@ -48,9 +37,7 @@
     "react-router-dom": "^4.2.2"
   },
   "lint-staged": {
-    "*.test.tsx": [
-      "jest"
-    ],
+    "*.test.tsx": ["jest"],
     "*.{js,tsx,ts}": [
       "prettier --single-quote --trailing-comma es5 --write",
       "eslint",
