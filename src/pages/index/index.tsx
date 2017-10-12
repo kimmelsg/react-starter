@@ -1,6 +1,6 @@
 import React from 'react';
-import Message from 'shared/message';
 import styles from './style.scss';
+import Message from 'shared/message';
 import { Link } from 'react-router-dom';
 import announcements from './gql/announcements';
 
