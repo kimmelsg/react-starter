@@ -18,5 +18,6 @@ module.exports = {
     ],
   },
 
-  plugins: ['graphql', 'react'],
+  plugins: ['graphql', 'react', 'css-modules'],
+  extends: ['plugin:css-modules/recommended'],
 };
