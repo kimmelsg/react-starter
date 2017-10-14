@@ -1,0 +1,11 @@
+version: '3'
+services:
+  frontend:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile.dev
+    image: react-starter
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/src

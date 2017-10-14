@@ -10,9 +10,15 @@ Edit `get-types` script inside `package.json` to point to your graphql api and r
 
 ## Start
 
-Clone the repo and `npm install`.
+Clone the repo and `docker-compose up` 
 
-Open VS Code, in the debugger tab, start `Server / Browser`. The app is now running in Chrome. Any errors will be shown on the correct line in your editor.
+
+...or use VS Code, have node installed:
+
+-  `npm install`.
+- Open VS Code, in the debugger tab, start `Server / Browser`. 
+
+The app is now running in Chrome. Any errors will be shown on the correct line in your editor.
 
 ## Develop
 

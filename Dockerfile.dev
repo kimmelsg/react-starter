@@ -1,0 +1,10 @@
+FROM node:8.6.0
+
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+RUN npm install
+
+COPY . .
+
+CMD ./node_modules/.bin/webpack-dev-server --hot --inline --config config/dev.config.js
+EXPOSE 8080

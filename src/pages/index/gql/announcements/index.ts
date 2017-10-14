@@ -9,4 +9,4 @@ type Props = {
 
 type WrappedProps = Props & QueryProps;
 
-export default graphql<announcementsQuery, WrappedProps>(all);
+export default graphql<announcementsQuery, WrappedProps, Props>(all);
