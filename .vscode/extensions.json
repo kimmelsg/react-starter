@@ -7,6 +7,7 @@
     "PeterJausovec.vscode-docker",
     "dbaeumer.vscode-eslint",
     "kumar-harsh.graphql-for-vscode",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "rebornix.project-snippets"
   ]
 }

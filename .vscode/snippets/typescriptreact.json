@@ -1,0 +1,49 @@
+{
+  "Class Component": {
+    "prefix": "cc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "class ${1:filename} extends React.Component {",
+      "  render() {",
+      "    return (",
+      "      ${2:component}",
+      "    );",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Class Component Template"
+  },
+  "Stateless Component": {
+    "prefix": "sc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export default () => (",
+      "  ${1:component}",
+      ")",
+      ""
+    ],
+    "description": "Stateless component"
+  },
+  "Stateless Component Connect": {
+    "prefix": "scc",
+    "body": [
+      "import React from 'react';",
+      "import { ${1:import} } from '${2:import-from}'",
+      "",
+      "const ${3:component} = () => (",
+      "  ${4:render}",
+      ")",
+      "",
+      "export default ${1:import}(${3:component})"
+    ],
+    "description": "Stateless component (connect)"
+  },
+  "Import Link": {
+    "prefix": "il",
+    "body": ["import { Link } from 'react-router-dom'"],
+    "description": "Import React Router Link"
+  }
+}
